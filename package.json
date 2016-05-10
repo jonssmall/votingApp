@@ -1,27 +1,16 @@
 {
-  "name": "clementinejs-fcc",
+  "name": "voting-app",
   "version": "1.0.1",
-  "description": "The elegant and lightweight boilerplate for full stack JavaScript.",
+  "description": "FCC Homework for Full Stack Voting App",
   "main": "server.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/johnstonbl01/clementinejs-fcc"
-  },
-  "homepage": "http://www.clementinejs.com/",
-  "bugs": "https://github.com/johnstonbl01/clementinejs-fcc/issues",
-  "keywords": [
-    "MongoDB",
-    "Mongoose",
-    "full stack",
-    "Express",
-    "Node",
-    "javascript",
-    "boilerplate"
-  ],
+    "url": "git+https://github.com/jonssmall/votingApp"
+  },    
   "scripts": {
   "start": "node server.js"
   },
-  "author": "Blake Johnston",
+  "author": "Jon Small",
   "license": "MIT",
   "dependencies": {
     "dotenv": "^1.2.0",
