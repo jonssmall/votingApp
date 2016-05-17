@@ -16,13 +16,18 @@ module.exports = function (app, passport) {
 	var clickHandler = new ClickHandler();
 
 	app.route('/')
-		.get(isLoggedIn, function (req, res) {
+		.get(function (req, res) {
 			res.sendFile(path + '/public/index.html');
 		});
 
 	app.route('/login')
 		.get(function (req, res) {
 			res.sendFile(path + '/public/login.html');
+		});
+
+	app.route('/loggedin')
+		.get(function(req, res) { 
+			res.send(req.isAuthenticated() ? req.user : '0'); 
 		});
 
 	app.route('/logout')
