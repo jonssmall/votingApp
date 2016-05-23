@@ -20,6 +20,11 @@ module.exports = function (app, passport) {
 			res.sendFile(path + '/public/index.html');
 		});
 
+	app.route("/polls/new")
+		.get(isLoggedIn, function (req, res) {
+			res.sendFile(path + '/public/newPoll.html');
+		});
+
 	app.route('/login')
 		.get(function (req, res) {
 			res.sendFile(path + '/public/login.html');

@@ -4,6 +4,9 @@ app.controller("votingCtrl", function($scope, $http) {
 	$scope.message = "Hello Main";
 });
 
+app.controller("pollCtrl", function($scope, $http) {
+	$scope.message = "Hello Main";
+});
 
 app.controller("userCtrl", function($scope, $http) {
 	$scope.loggedIn = false;
