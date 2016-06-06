@@ -17,12 +17,20 @@ module.exports = function (app, passport) {
 
 	app.route('/')
 		.get(function (req, res) {
+			console.log(req.session);
 			res.sendFile(path + '/public/index.html');
 		});
 
-	app.route("/polls/new")
+	app.route('/polls/new')
 		.get(isLoggedIn, function (req, res) {
 			res.sendFile(path + '/public/newPoll.html');
+		});
+
+	app.route('/polls/new')
+		.post(isLoggedIn, function (req, res) {
+			console.log("Here comes dat body");
+			console.log(req.body);
+			res.send("Hi");
 		});
 
 	app.route('/login')

@@ -4,6 +4,7 @@
 
 	<head>
 		<title>Create New Poll</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		
 		<link href="/public/css/main.css" rel="stylesheet" type="text/css">
 	</head>	
@@ -25,10 +26,44 @@
 			<a class="menu" href="/logout">Logout</a>
 		</div>		
 		</header>
-		<div ng-controller="pollCtrl">
-			<h1>{{2+2}}</h1>
-		</div>
-				
+		<div class="container">
+			<div class="jumbotron" ng-controller="pollCtrl">
+				<h1>Make a new poll.</h1>				
+				<div class="row">
+					<div class="col-sm-3"></div>
+					<div class="col-sm-6">
+						<span>Poll Name</span>
+						<input type="text" class="form-control" ng-model="name">
+					</div>
+					<div class="col-sm-3"></div>
+				</div>
+				<div class="row">
+					<div class="col-sm-3"></div>
+					<div class="col-sm-6">
+						<span>Options</span>
+						<button ng-click="addOption()">Add Option</button>
+					</div>
+					<div class="col-sm-3"></div>
+				</div>
+				<div class="row" ng-repeat="option in options track by $index">
+					<div class="col-sm-3"></div>
+					<div class="col-sm-6">
+						<input type="text" class="form-control" ng-model="option.body">
+					</div>
+					<div class="col-sm-3"></div>
+				</div>
+				<div class="row">
+					<div class="col-sm-3"></div>
+					<div class="col-sm-6">						
+						<button ng-click="createPoll()">Create Poll</button>
+					</div>
+					<div class="col-sm-3"></div>
+				</div>			
+			</div>
+		</div>		
+
+		<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
 		<script type="text/javascript" src="/common/app.js"></script>		
 	</body>

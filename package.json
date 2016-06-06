@@ -6,13 +6,14 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jonssmall/votingApp"
-  },    
+  },
   "scripts": {
-  "start": "node server.js"
+    "start": "node server.js"
   },
   "author": "Jon Small",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.15.1",
     "dotenv": "^1.2.0",
     "express": "^4.12.4",
     "express-session": "^1.11.3",
